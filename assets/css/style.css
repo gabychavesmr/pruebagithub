@@ -1,0 +1,323 @@
+*{
+    margin: 0;
+    padding: 0;
+
+    }
+
+
+    
+ /* @import url('https://fonts.googleapis.com/css2? family= Quicksand:wght@300;400;500;600;700 & display=swap');
+.bodyinicio{
+    display: grid;
+    height: 500px;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+    grid-template-rows:  auto auto 100px;
+    
+    grid-template-areas:   
+                             " header    header   header"     
+                            " producto producto aside"
+                            " ofertas   ofertas   aside"
+                            " footer    footer    footer";
+}
+
+
+
+header{
+    grid-area: header;
+    background-color: blueviolet;
+
+}
+#producto{
+    grid-area: producto;
+    background-color: darkgreen;
+    display: grid;
+    height: 400px;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px 200px;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-between;
+    align-content: center;
+    
+  
+
+
+    
+
+    
+}
+nav{
+    grid-area: nav;
+    background-color: rgb(24, 4, 209);
+    display: flex;
+    align-items: center;
+    justify-content: end;
+
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    list-style-type: none;
+}
+nav ul li a{
+    text-decoration: none;
+    display: block;
+    color: white;
+    padding: 20px;
+}
+
+
+aside{
+    grid-area: aside;
+    background-color: blue;
+}
+#ofertas{
+    grid-area: ofertas;
+    background-color: brown;
+
+}
+footer{
+    grid-area: footer;
+    background-color: cornflowerblue;
+}
+@media(max-width:780px){
+    .bodyinicio{
+        grid-template-rows: 150px auto auto auto 150px 100px  ;
+        grid-template-areas:    "nav header    header   header"     
+                                "nav producto producto producto"
+                                "nav ofertas   ofertas   ofertas"
+                                "nav aside     aside     aside"
+                                "nav footer    footer    footer";
+
+    }
+@media(max-width:608px){
+    .bodyinicio{
+        grid-template-rows: 80px 150px auto auto 150px 100px  ;
+        grid-template-areas:    "nav        nav        nav      nav"
+                                "header     header    header   header"     
+                                "producto producto    producto producto"
+                                "ofertas    ofertas   ofertas   ofertas"
+                                "aside      aside     aside     aside"
+                                "footer     footer    footer    footer";
+       
+    }
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: end;
+    }
+    nav ul{
+        flex-direction: row;
+        justify-content: end;
+        align-items:center;
+        list-style-type: none;
+    }
+}
+} */
+.formulario{
+    font-family: 'Quicksand', sans-serif;
+    background-color: rgb(34, 34, 34);
+    max-width: 800px;
+    margin: auto;
+    margin-top: 40px;
+    padding: 30px;
+    box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 0px 0px 20px 0px #000000;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 60px;
+    grid-template-areas: "zona1 zona1"
+                         "zona2 zona3"
+                         "zona4 zona5"
+                         "zona6 zona6"
+                         "zona7 zona7";
+
+}
+
+.formulario label{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.formulario label input, .formulario label textarea{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgb(95, 6, 6);
+    color: white;
+    margin-top: 10px;
+}
+
+.formulario h2 {
+    grid-area: zona1;
+}
+.formulario label:nth-child(2){
+    grid-area: zona2;
+}
+.formulario label:nth-child(3){
+    grid-area: zona3;
+}
+.formulario label:nth-child(4){
+    grid-area: zona4;
+
+}
+.formulario label:nth-child(5){
+    grid-area: zona5;
+
+}
+.formulario label:nth-child(6){
+    grid-area: zona6;
+
+}
+.formulario button:nth-child(7){
+    grid-area: zona7;
+    background-color: rgb(100, 8, 8);
+    border: none;
+    color: white;
+    margin: 10px;
+    border-radius: 5px;
+
+}
+.padre{
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px;
+    grid-template-rows: 50px 50px 50px 50px;
+}
+.padre .item:nth-child(1){
+    grid-column: 1/3;
+    grid-row: 1/3;
+    background-color: aqua;
+}
+.padre .item:nth-child(2){
+    background-color: rgb(48, 17, 121);
+    grid-column: 3/5;
+    grid-row: 1/3;
+    
+}
+.latte{
+    width: 100%;
+}
+.padre .item:nth-child(3){
+    background-color: rgb(121, 172, 41);
+    grid-column: 1/3;
+    grid-row: 3/5;
+}
+.padre .item:nth-child(4){
+    background-color: rgb(155, 25, 25);
+    grid-column: 3/5;
+    grid-row: 3/5;
+}
+.padre .item:nth-child(5){
+    grid-column: 2/4;
+    grid-row: 2/4;
+    background-color: rgb(33, 19, 48);
+} 
+
+.latte{
+    
+}
+
+/* .padre{
+    margin: 10px;
+    display: grid;
+    grid-template-columns: 300px 300px ;
+    grid-template-rows: 200px 200px 200px ;
+    column-gap: 10px;
+    row-gap: 10px ;
+}
+.item3 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+
+} */
+
+
+/* header{
+    grid-area: header;
+    background-color: blueviolet;
+}
+#producto{
+    grid-area: producto;
+    background-color: yellow;
+}
+#ofertas{
+    grid-area: ofertas;
+    background-color: violet;
+}
+footer{
+    grid-area: footer;
+    background-color: cadetblue;
+} */
+.bodyinicio{
+    display: grid;
+    gap: 10px ;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: 100px 150px 500px 150px;
+    grid-template-areas: "nav nav nav nav nav nav"
+                        "header header header header header header"
+                        "producto producto producto producto producto producto"
+                        "ofertas ofertas ofertas ofertas ofertas ofertas";
+
+}
+nav{
+    grid-area: nav;
+    background-color: blanchedalmond;
+    /* display: grid;
+    align-items: center; */
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    justify-content: end;
+    align-items: center;
+    font-size: 18px;
+    padding: 40px;
+    
+}
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    padding: 15px;
+    
+    
+}
+@media(max-width: 389px){
+    nav ul{
+        position: fixed;
+        top: 0;
+        left: 0;
+        flex-direction: column;
+    }
+}
+
+header{
+    grid-area: header;
+    background-color: blueviolet;
+
+}
+#producto{
+    grid-area: producto;
+    background-color: crimson;
+    margin: 10px;
+    display: grid;
+    width: 100%;
+    height: 500px;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 500px ;
+ 
+    
+    
+}
+
+#ofertas{
+    grid-area: ofertas;
+    background-color: darkorchid;
+    padding: 10px;
+    margin: 10px;
+  }
+  
